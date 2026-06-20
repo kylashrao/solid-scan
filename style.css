@@ -160,10 +160,14 @@ canvas {
 /* --- SolidScan Navigation & Footer Additions --- */
 
 /* Header Navigation Styling */
+/* Update your existing .site-nav class to this: */
 .site-nav {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    flex-wrap: wrap;
+    /* This tells the links to wrap if they run out of space */
+    gap: 10px;
+    /* Reduced gap slightly for mobile */
     margin: 20px 0 30px 0;
     padding-bottom: 15px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
