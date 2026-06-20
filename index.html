@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Document Scanner to PDF</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+
+<body>
+    <div class="app-container">
+        <header>
+            <h1>📄 SolidScan</h1>
+            <p class="subtitle">100% Secure. Processed entirely on your device.</p>
+
+            <nav class="site-nav">
+                <a href="index.html" class="nav-link active">Scanner</a>
+                <a href="guide.html" class="nav-link">Scan Guide</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="privacy.html" class="nav-link">Privacy</a>
+            </nav>
+        </header>
+
+        <main>
+            <div id="drop-zone" class="drop-zone">
+                <div class="icon">📸</div>
+                <h2>Tap to Scan or Drop Image</h2>
+                <p>Supports JPG, PNG, WEBP</p>
+
+                <label for="file-input" class="action-btn primary-btn">
+                    Open Camera / Browse
+                </label>
+                <input type="file" id="file-input" accept="image/*" capture="environment">
+            </div>
+
+            <div id="preview-section" class="hidden">
+                <div class="canvas-wrapper">
+                    <canvas id="doc-canvas"></canvas>
+                </div>
+
+                <div class="controls">
+                    <button id="filter-btn" class="action-btn secondary-btn">🌓 Enhance Contrast</button>
+                    <button id="download-btn" class="action-btn success-btn">💾 Save as PDF</button>
+                    <button id="reset-btn" class="action-btn text-btn">Cancel</button>
+                </div>
+            </div>
+        </main>
+        <footer class="site-footer">
+            <p>&copy; 2026 SolidScan. All rights reserved. Locally processed utility.</p>
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <span class="divider">•</span>
+                <a href="contact.html">Support</a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
