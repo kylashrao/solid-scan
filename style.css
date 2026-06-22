@@ -230,3 +230,32 @@ canvas {
 .footer-links .divider {
     color: #4a5568;
 }
+
+/* ... existing code ... */
+
+/* ... existing code ... */
+
+/* ADD THIS TO THE BOTTOM OF YOUR STYLE.CSS */
+.gallery-strip {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    min-height: 120px;
+    margin-top: 20px;
+}
+
+.thumb {
+    width: 80px;
+    height: 110px;
+    border: 2px solid #4a5568;
+    border-radius: 8px;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+.thumb.active {
+    border-color: #63b3ed;
+}

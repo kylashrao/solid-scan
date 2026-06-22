@@ -9,6 +9,7 @@
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js'></script>
 </head>
 
 <body>
@@ -45,10 +46,36 @@
 
                 <div class="controls">
                     <button id="filter-btn" class="action-btn secondary-btn">🌓 Enhance Contrast</button>
+                    <button id="next-btn" class="action-btn success-btn hidden">📸 Scan Next Page</button>
+                    <button id="copy-text-btn" class="action-btn secondary-btn">📋 Copy Text</button>
                     <button id="download-btn" class="action-btn success-btn">💾 Save as PDF</button>
                     <button id="reset-btn" class="action-btn text-btn">Cancel</button>
                 </div>
             </div>
+            <div id="status-msg" style="color: #94a3b8; font-size: 0.8rem; text-align: center; margin-bottom: 10px;">
+            </div>
+            <div id="gallery-container" class="gallery-strip hidden"></div>
+            <style>
+                .gallery-strip {
+                    display: flex;
+                    gap: 10px;
+                    overflow-x: auto;
+                    padding: 20px 0;
+                }
+
+                .thumb {
+                    width: 80px;
+                    height: 110px;
+                    border: 2px solid #4a5568;
+                    border-radius: 8px;
+                    cursor: pointer;
+                    object-fit: cover;
+                }
+
+                .thumb.active {
+                    border-color: #63b3ed;
+                }
+            </style>
         </main>
         <footer class="site-footer">
             <p>&copy; 2026 SolidScan. All rights reserved. Locally processed utility.</p>
