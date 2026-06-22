@@ -259,3 +259,51 @@ canvas {
 .thumb.active {
     border-color: #63b3ed;
 }
+
+.guide-container {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.guide-container h3 {
+    margin-top: 0;
+    color: #1e293b;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.guide-step {
+    margin-bottom: 15px;
+}
+
+.guide-step h4 {
+    margin: 0 0 5px 0;
+    color: #2563eb;
+    /* A nice professional blue */
+}
+
+/* Update this for the step instructions */
+.guide-step p {
+    margin: 0;
+    color: #334155;
+    /* Changed to a darker, high-contrast grey */
+    line-height: 1.6;
+    /* Increased spacing for better readability */
+    font-weight: 500;
+    /* Slightly bolder for better visibility */
+}
+
+/* Update this for the footer tip */
+.guide-container small {
+    color: #475569;
+    /* Darker than the previous light grey */
+    font-style: italic;
+    display: block;
+    margin-top: 15px;
+}
